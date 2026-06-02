@@ -1,380 +1,263 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infórmate sobre la ODS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La ODS — Adaptación Artificial e Impacto Futuro</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
-    <style>
-        body {
-            background: #0b0618;
-            color: white;
-        }
+  <!-- Enlaces a tus estilos separados según tu estándar de carpetas -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes/output.css') }}" />
 
-        .glass {
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(168, 85, 247, 0.35);
-            backdrop-filter: blur(14px);
-        }
-
-        .hero-bg {
-            background:
-                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-                url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .purple-glow {
-            box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
-        }
-    </style>
+  <!-- Carga del motor de Tailwind y tu lógica JS externa -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 
-<body>
+<body class="bg-ods-bg text-ods-dark font-ui overflow-x-hidden">
 
-    <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-purple-500/30">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-black tracking-widest">
-                <span class="text-purple-500">SYS.ON</span> | LA ODS
-            </h1>
-
-            <div class="hidden md:flex gap-6 text-sm font-bold text-gray-300">
-                <a href="#problema" class="hover:text-purple-400">Problema</a>
-                <a href="#solucion" class="hover:text-purple-400">Solución</a>
-                <a href="#figma" class="hover:text-purple-400">Figma</a>
-                <a href="#impacto" class="hover:text-purple-400">Impacto</a>
-            </div>
-
-            <a href="/" class="bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-lg font-bold">
-                Volver
-            </a>
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-ods-border">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-ods-purple/10 px-2 py-0.5 rounded border border-ods-purple/20">
+          <span class="font-mono font-bold text-xs text-ods-purple">SYS.ON</span>
         </div>
-    </nav>
+        <span class="font-display font-black text-xl tracking-widest text-ods-dark uppercase">
+          LA <span class="text-ods-purple">ODS</span> // INFÓRMATE
+        </span>
+      </div>
 
-    <!-- HERO -->
-    <section class="hero-bg min-h-screen flex items-center px-6 pt-20">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="hidden md:flex items-center gap-8 font-ui font-bold text-sm tracking-wider uppercase text-ods-dark/70">
+        <a href="#adaptacion" class="hover:text-ods-purple transition-colors">¿Cómo Adaptarse?</a>
+        <a href="#futuro" class="hover:text-ods-purple transition-colors">Estudio Futuro</a>
+        <a href="#ods4" class="hover:text-ods-purple transition-colors">ODS 4 Calidad</a>
+        <a href="#metrometrics" class="hover:text-ods-purple transition-colors">Métricas de Impacto</a>
+      </div>
 
-            <div>
-                <p class="text-purple-400 tracking-[6px] font-bold mb-4">
-                    // PROYECTO ODS 4
-                </p>
+      <a href="/" class="border-2 border-ods-dark hover:bg-ods-dark hover:text-white px-5 py-1.5 rounded font-display font-bold text-sm uppercase tracking-widest transition-all">
+        Volver ↩
+      </a>
+    </div>
+  </nav>
 
-                <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
-                    Tecnología para mejorar el aprendizaje
-                </h1>
+  <!-- HERO TOTALMENTE DESPEJADO: El arte se luce al 100% sin obstrucciones -->
+  <section class="relative min-h-[85vh] w-full bg-black bg-cover bg-center bg-no-repeat overflow-hidden flex items-center pt-16" style="background-image: url('{{ url_for('static', filename='image/inicio2.jpg') }}') !important;">
+    <!-- Capa sutil superior para garantizar legibilidad del Navbar fijo -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent pointer-events-none"></div>
+  </section>
 
-                <p class="text-gray-300 text-lg leading-8 mb-8">
-                    Nuestro proyecto busca ayudar a los estudiantes a dejar la dependencia excesiva de la IA,
-                    mejorar sus trabajos académicos y aprender de forma más activa mediante una experiencia
-                    interactiva diseñada en Figma.
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="#problema" class="bg-purple-600 hover:bg-purple-700 px-7 py-4 rounded-xl font-black purple-glow">
-                        Conocer el problema
-                    </a>
-
-                    <a href="#solucion" class="border border-purple-500 px-7 py-4 rounded-xl font-black hover:bg-purple-600">
-                        Ver solución
-                    </a>
-                </div>
-            </div>
-
-            <div class="glass rounded-3xl p-6">
-                <img class="rounded-2xl w-full"
-                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-                     alt="Estudiante usando tecnología">
-            </div>
-
+  <!-- BLANCO DE CONTROL COGNITIVO (INTEGRA TÍTULO Y CONTENIDOS COMPACTOS) -->
+  <section class="bg-black border-y-2 border-[#A020F0] py-10 px-6 relative z-20 shadow-2xl">
+    <div class="max-w-7xl mx-auto space-y-8">
+      
+      <!-- Fila superior: Título masivo e interactores rápidos -->
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 border-b border-white/10 pb-6">
+        <div class="max-w-3xl">
+          <h1 class="text-white text-3xl md:text-5xl font-display font-black tracking-tight uppercase leading-none">
+            EL FUTURO ES DE QUIEN SABE <span class="text-[#A020F0]">CONTRAPESAR LA IA</span>
+          </h1>
         </div>
-    </section>
+        <div class="flex gap-3 font-display font-bold text-xs tracking-wider uppercase w-full lg:w-auto">
+          <a href="#adaptacion" class="bg-[#A020F0] text-white px-6 py-3.5 rounded-xl hover:bg-[#A020F0]/80 transition text-center flex-1 lg:flex-none">
+              Manual de Adaptación
+          </a>
+          <a href="#futuro" class="border border-white/60 text-white px-6 py-3.5 rounded-xl hover:bg-white hover:text-black transition text-center flex-1 lg:flex-none">
+              El Estudio en 2030
+          </a>
+        </div>
+      </div>
 
-    <!-- PROBLEMA -->
-    <section id="problema" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
+      <!-- Fila inferior: Datos técnicos redistribuidos sin pisar la ilustración -->
+      <div class="grid md:grid-cols-3 gap-6 text-white">
+        <div class="md:col-span-2 space-y-2">
+          <p class="text-[#A020F0] font-mono font-bold uppercase tracking-[0.2em] text-xs">
+            // GUÍA DE ADAPTACIÓN COGNITIVA 2026
+          </p>
+          <p class="text-white/80 font-ui text-sm md:text-base leading-relaxed">
+            Copiarle a un bot destruye tu valor humano. El protocolo ODS redefine las reglas del juego: hackea la inteligencia artificial para que actúe como tu rival de entrenamiento mental, no como tu sustituto intelectual.
+          </p>
+        </div>
+        
+        <div class="bg-white/5 border border-white/10 p-4 rounded-xl font-ui">
+          <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-2">
+            <span class="font-mono text-[10px] text-white/40">// STATUS: MONITOR_IA</span>
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          </div>
+          <p class="font-display font-bold text-white text-base uppercase mb-1">Simbiosis Regulada</p>
+          <p class="text-xs text-white/70 leading-relaxed">
+            "Quien no genera fricción mental hoy, se convierte en un analfabeto funcional del mañana."
+          </p>
+        </div>
+      </div>
 
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-6">
-                Problema identificado
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: CÓMO ADAPTARSE A LA IA -->
+  <section id="adaptacion" class="relative py-24 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="font-mono text-ods-purple text-xs font-bold tracking-[0.2em] uppercase">// Manual Operativo</span>
+            <h2 class="font-display font-black text-5xl md:text-6xl uppercase tracking-tight text-ods-dark mt-2">
+              Cómo Adaptarse a la IA sin Perder tu Cerebro
             </h2>
-
-            <p class="text-center text-gray-300 max-w-3xl mx-auto mb-14">
-                Muchos estudiantes usan la inteligencia artificial solo para copiar respuestas,
-                sin analizar ni comprender el tema. Esto afecta su aprendizaje real.
+            <p class="font-ui text-lg text-ods-dark/70 max-w-2xl mx-auto mt-4 font-medium">
+              La adaptación no significa prohibición. El ecosistema ODS propone usar la IA bajo el principio de **Resistencia Cognitiva**, convirtiendo al algoritmo en una herramienta de entrenamiento.
             </p>
+        </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-
-                <div class="glass p-8 rounded-3xl">
-                    <img class="rounded-2xl mb-6"
-                         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-                         alt="Estudiantes con laptop">
-                    <h3 class="text-2xl font-black text-purple-400 mb-3">
-                        Dependencia de la IA
-                    </h3>
-                    <p class="text-gray-300">
-                        Los estudiantes pueden acostumbrarse a que la IA haga todo el trabajo,
-                        reduciendo su esfuerzo personal y pensamiento crítico.
-                    </p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 bg-ods-white border border-ods-border rounded-xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 bg-white rounded-lg border border-ods-border flex items-center justify-center text-2xl mb-6">🎯</div>
+                  <h3 class="font-display font-black text-2xl text-ods-dark uppercase tracking-wide mb-3">La IA como Sparring Mental</h3>
+                  <p class="font-ui text-sm text-ods-dark/80 leading-relaxed">
+                    No le pidas que escriba tu ensayo. Pídele que **destruya tus argumentos**. Úsala para que actúe como un rival intelectual que te haga preguntas difíciles y te obligue a defender tus ideas con bases sólidas.
+                  </p>
                 </div>
+                <span class="font-mono text-[10px] text-ods-purple font-bold mt-6 block">[PROTOCOLO 01 // RETO]</span>
+            </div>
 
-                <div class="glass p-8 rounded-3xl">
-                    <img class="rounded-2xl mb-6"
-                         src="https://images.unsplash.com/photo-1499750310107-5fef28a66643"
-                         alt="Cuaderno de estudio">
-                    <h3 class="text-2xl font-black text-purple-400 mb-3">
-                        Falta de organización
-                    </h3>
-                    <p class="text-gray-300">
-                        Muchos estudiantes no tienen un orden claro para estudiar, investigar,
-                        redactar y mejorar sus tareas.
-                    </p>
+            <div class="p-8 bg-ods-white border-2 border-ods-purple rounded-xl shadow-md flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 bg-ods-purple/10 border border-ods-purple/20 rounded-lg flex items-center justify-center text-2xl mb-6">🎛️</div>
+                  <h3 class="font-display font-black text-2xl text-ods-purple uppercase tracking-wide mb-3">Modular tu Fricción</h3>
+                  <p class="font-ui text-sm text-ods-dark/80 leading-relaxed">
+                    El cerebro solo aprende cuando experimenta dificultad ("fricción"). Si delegas la escritura o el cálculo por completo al algoritmo, tu mezclador cognitivo se apaga. Úsala exclusivamente para esquematizar y ordenar tus fuentes primarias.
+                  </p>
                 </div>
+                <span class="font-mono text-[10px] text-ods-purple font-bold mt-6 block">[PROTOCOLO 02 // MIXER]</span>
+            </div>
 
-                <div class="glass p-8 rounded-3xl">
-                    <img class="rounded-2xl mb-6"
-                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-                         alt="Trabajo en equipo">
-                    <h3 class="text-2xl font-black text-purple-400 mb-3">
-                        Bajo aprendizaje real
-                    </h3>
-                    <p class="text-gray-300">
-                        Al copiar respuestas automáticas, el estudiante entrega una tarea,
-                        pero no desarrolla sus propias habilidades.
-                    </p>
+            <div class="p-8 bg-ods-white border border-ods-border rounded-xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 bg-white rounded-lg border border-ods-border flex items-center justify-center text-2xl mb-6">🛡️</div>
+                  <h3 class="font-display font-black text-2xl text-ods-dark uppercase tracking-wide mb-3">Filtro Antiautomatización</h3>
+                  <p class="font-ui text-sm text-ods-dark/80 leading-relaxed">
+                    Cada dato entregado por una máquina debe ser verificado de forma análoga. Adaptarse con éxito implica aprender a auditar algoritmos, cuestionar sesgos y refinar las respuestas del software aplicando tu perspectiva humana única.
+                  </p>
                 </div>
-
+                <span class="font-mono text-[10px] text-ods-purple font-bold mt-6 block">[PROTOCOLO 03 // AUDITORÍA]</span>
             </div>
         </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SOLUCION -->
-    <section id="solucion" class="py-24 px-6 bg-black/30">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-            <div>
-                <img class="rounded-3xl purple-glow"
-                     src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-                     alt="Persona explicando proyecto">
-            </div>
-
-            <div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    Nuestra propuesta
-                </h2>
-
-                <p class="text-gray-300 text-lg leading-8 mb-6">
-                    Creamos una propuesta digital donde el estudiante pueda interactuar con una plataforma
-                    que lo guíe paso a paso para mejorar sus trabajos académicos.
-                </p>
-
-                <p class="text-gray-300 text-lg leading-8 mb-6">
-                    La idea no es prohibir el uso de la IA, sino enseñar a usarla correctamente:
-                    como apoyo, no como reemplazo del aprendizaje.
-                </p>
-
-                <div class="grid grid-cols-2 gap-4 mt-8">
-                    <div class="glass p-5 rounded-2xl">
-                        ✅ Mejora trabajos
-                    </div>
-                    <div class="glass p-5 rounded-2xl">
-                        ✅ Organiza ideas
-                    </div>
-                    <div class="glass p-5 rounded-2xl">
-                        ✅ Enseña procesos
-                    </div>
-                    <div class="glass p-5 rounded-2xl">
-                        ✅ Motiva al estudiante
-                    </div>
-                </div>
-            </div>
-
+  <!-- SECCIÓN 2: EL ESTUDIO EN UNOS AÑOS (VISIÓN FUTURISTA) -->
+  <section id="futuro" class="relative py-24 px-6 border-t border-ods-border bg-ods-bg">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded bg-ods-purple/10 border border-ods-purple/20">
+            <span class="font-mono text-ods-purple text-xs font-bold uppercase">// Línea de Tiempo: Futuro 2030+</span>
+          </div>
+          <h2 class="font-display font-black text-5xl md:text-6xl uppercase tracking-tight text-ods-dark mb-6">
+            ¿Cómo será el estudio en unos años?
+          </h2>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed mb-6">
+            En un futuro cercano, **memorizar conceptos o redactar textos estándar valdrá exactamente cero**. Cualquier Inteligencia Artificial podrá generar tesis enteras en milisegundos. Las salas de clase e instituciones colapsarán si siguen evaluando de forma pasiva.
+          </p>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed font-semibold text-ods-purple">
+            El valor del estudiante ya no estará en "acumular datos", sino en su capacidad de control y ejecución real.
+          </p>
         </div>
-    </section>
 
-    <!-- COMO FUNCIONA -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-
-            <h2 class="text-4xl md:text-5xl font-black text-center mb-14">
-                ¿Cómo funcionaría la aplicación?
-            </h2>
-
-            <div class="grid md:grid-cols-4 gap-6">
-
-                <div class="glass p-7 rounded-3xl text-center">
-                    <div class="text-5xl mb-4">1️⃣</div>
-                    <h3 class="font-black text-xl mb-3">Ingreso</h3>
-                    <p class="text-gray-300">El estudiante entra a la plataforma desde el prototipo.</p>
-                </div>
-
-                <div class="glass p-7 rounded-3xl text-center">
-                    <div class="text-5xl mb-4">2️⃣</div>
-                    <h3 class="font-black text-xl mb-3">Diagnóstico</h3>
-                    <p class="text-gray-300">Responde preguntas sobre su forma de estudiar.</p>
-                </div>
-
-                <div class="glass p-7 rounded-3xl text-center">
-                    <div class="text-5xl mb-4">3️⃣</div>
-                    <h3 class="font-black text-xl mb-3">Guía</h3>
-                    <p class="text-gray-300">Recibe pasos para mejorar su trabajo académico.</p>
-                </div>
-
-                <div class="glass p-7 rounded-3xl text-center">
-                    <div class="text-5xl mb-4">4️⃣</div>
-                    <h3 class="font-black text-xl mb-3">Mejora</h3>
-                    <p class="text-gray-300">Aplica recomendaciones y mejora su aprendizaje.</p>
-                </div>
-
+        <div class="space-y-4">
+            <div class="bg-white p-5 rounded-xl border border-ods-border shadow-sm">
+                <span class="font-mono text-[10px] text-ods-purple block font-bold mb-1">[EVOLUCIÓN DE EVALUACIONES]</span>
+                <h4 class="font-display font-black text-xl text-ods-dark uppercase">De Exámenes Escritos a Defensa en Vivo</h4>
+                <p class="text-xs text-ods-dark/70 mt-1">Como los textos se generarán automáticamente, los profesores evaluarán mediante simulaciones, debates analógicos y demostraciones mecánicas a contrarreloj.</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl border border-ods-border shadow-sm">
+                <span class="font-mono text-[10px] text-ods-purple block font-bold mb-1">[ESTRUCTURA CURRICULAR]</span>
+                <h4 class="font-display font-black text-xl text-ods-dark uppercase">Curaciones de Contenido y "Promoting" Crítico</h4>
+                <p class="text-xs text-ods-dark/70 mt-1">Las materias se centrarán en estructurar flujos lógicos, curar información verídica entre millones de datos sintéticos y dirigir arquitecturas de software mediante el pensamiento analítico.</p>
+            </div>
+            <div class="bg-white p-5 rounded-xl border-2 border-ods-dark shadow-md">
+                <span class="font-mono text-[10px] text-ods-purple block font-bold mb-1">[PROYECCIÓN BIO-COGNITIVA]</span>
+                <h4 class="font-display font-black text-xl text-ods-dark uppercase">Sistemas de Control Mental (Estilo ODS)</h4>
+                <p class="text-xs text-ods-dark/70 mt-1">Estudiar se parecerá a pilotar una nave espacial o coordinar una transmisión compleja: regularás perillas de canales cognitivos visuales, interactivos y mecánicos para no sufrir de fatiga cibernética.</p>
             </div>
         </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FIGMA -->
-    <section id="figma" class="py-24 px-6 bg-black/30">
-        <div class="max-w-7xl mx-auto text-center">
-
-            <h2 class="text-4xl md:text-5xl font-black mb-6">
-                Interacción en Figma
-            </h2>
-
-            <p class="text-gray-300 max-w-4xl mx-auto text-lg leading-8 mb-12">
-                En nuestro Figma estamos diseñando una experiencia interactiva donde el estudiante pueda
-                navegar entre pantallas, presionar botones, ver recomendaciones, explorar módulos y entender
-                cómo puede mejorar sus trabajos sin depender completamente de la IA.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-2xl font-black text-purple-400 mb-4">
-                        Pantalla de inicio
-                    </h3>
-                    <p class="text-gray-300">
-                        Presenta el problema principal y motiva al estudiante a tomar control de su aprendizaje.
-                    </p>
-                </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-2xl font-black text-purple-400 mb-4">
-                        Módulos interactivos
-                    </h3>
-                    <p class="text-gray-300">
-                        Permiten que el estudiante seleccione opciones, revise consejos y explore contenido educativo.
-                    </p>
-                </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-2xl font-black text-purple-400 mb-4">
-                        Recomendaciones
-                    </h3>
-                    <p class="text-gray-300">
-                        La app muestra consejos para investigar, resumir, organizar y mejorar sus tareas.
-                    </p>
-                </div>
-
-            </div>
+  <!-- SECCIÓN 3: RELACIÓN ODS 4 (EDUCACIÓN DE CALIDAD) -->
+  <section id="ods4" class="relative py-24 px-6 border-t border-ods-border bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-ods-white border-2 border-ods-dark rounded-2xl p-8 shadow-xl order-2 md:order-1">
+          <h3 class="font-display font-black text-3xl text-ods-dark uppercase mb-6 tracking-wide">Aportes a la Educación del Mañana</h3>
+          <ul class="space-y-3 font-ui text-md text-ods-dark/90 font-medium">
+            <li class="flex items-center gap-2">🕹️ <span class="border-b border-ods-border pb-1 w-full">Sustituye la memorización aburrida por minijuegos interactivos de Figma.</span></li>
+            <li class="flex items-center gap-2">🧠 <span class="border-b border-ods-border pb-1 w-full">Entrena la autonomía intelectual frente al plagio automatizado.</span></li>
+            <li class="flex items-center gap-2">🛠️ <span class="border-b border-ods-border pb-1 w-full">Configura entornos adaptados a perfiles visuales o prácticos.</span></li>
+            <li class="flex items-center gap-2">📊 <span class="border-b border-ods-border pb-1 w-full">Mide la resistencia a la frustración y el análisis de errores.</span></li>
+            <li class="flex items-center gap-2">🚀 <span class="pb-1 w-full">Prepara a estudiantes de secundaria para entornos laborales hiperautomatizados.</span></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- RELACION ODS -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-            <div>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    Relación con la ODS 4
-                </h2>
-
-                <p class="text-gray-300 text-lg leading-8 mb-6">
-                    Nuestro proyecto se relaciona con la ODS 4: Educación de Calidad, porque busca que los estudiantes
-                    aprendan mejor, desarrollen autonomía y usen la tecnología de manera responsable.
-                </p>
-
-                <p class="text-gray-300 text-lg leading-8">
-                    La educación de calidad no solo significa tener acceso a clases, sino también aprender con herramientas
-                    que ayuden a pensar, crear, analizar y resolver problemas.
-                </p>
-            </div>
-
-            <div class="glass p-8 rounded-3xl">
-                <h3 class="text-3xl font-black text-purple-400 mb-6">
-                    Aportes a la educación
-                </h3>
-
-                <ul class="space-y-4 text-gray-300 text-lg">
-                    <li>📚 Promueve el aprendizaje autónomo.</li>
-                    <li>🧠 Fortalece el pensamiento crítico.</li>
-                    <li>💻 Usa tecnología de forma responsable.</li>
-                    <li>🎯 Ayuda a mejorar trabajos académicos.</li>
-                    <li>🚀 Motiva a los estudiantes a participar más.</li>
-                </ul>
-            </div>
-
+        <div class="order-1 md:order-2">
+          <span class="font-mono text-ods-purple text-xs font-bold uppercase tracking-[0.2em]">// Marco de la Agenda Internacional</span>
+          <h2 class="font-display font-black text-5xl md:text-6xl uppercase tracking-tight text-ods-dark mt-2 mb-6">
+            Nuestra Fusión con la ODS 4
+          </h2>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed mb-4">
+            El proyecto se alinea perfectamente con el **Objetivo de Desarrollo Sostenible 4 (Educación de Calidad)**. Brindar una educación de calidad en 2026 ya no se limita a regalar computadoras o proveer internet estable.
+          </p>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed">
+            La verdadera equidad educativa implica **proteger la soberanía mental del alumno**. Si los jóvenes pierden la capacidad de pensar por estar amarrados a un bot que les resuelve todo de gratis, la educación de calidad habrá fracasado. La ODS devuelve las perillas de control a los humanos.
+          </p>
         </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- IMPACTO -->
-    <section id="impacto" class="py-24 px-6 bg-purple-950/40">
-        <div class="max-w-5xl mx-auto text-center">
-
-            <h2 class="text-4xl md:text-5xl font-black mb-8">
-                Impacto esperado
-            </h2>
-
-            <p class="text-gray-300 text-xl leading-9 mb-10">
-                Con esta propuesta esperamos que los estudiantes no solo entreguen trabajos,
-                sino que realmente aprendan durante el proceso. La plataforma busca convertir la tecnología
-                en una herramienta de apoyo educativo, no en una salida fácil para copiar respuestas.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-4xl font-black text-purple-400">+50%</h3>
-                    <p class="text-gray-300 mt-3">Mejor organización</p>
-                </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-4xl font-black text-purple-400">+70%</h3>
-                    <p class="text-gray-300 mt-3">Mayor participación</p>
-                </div>
-
-                <div class="glass p-8 rounded-3xl">
-                    <h3 class="text-4xl font-black text-purple-400">+IA</h3>
-                    <p class="text-gray-300 mt-3">Uso responsable</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FINAL -->
-    <section class="py-24 px-6 text-center">
-        <h2 class="text-4xl md:text-5xl font-black mb-6">
-            La IA no debe reemplazar tu mente
-        </h2>
-
-        <p class="text-gray-300 max-w-3xl mx-auto text-lg leading-8 mb-10">
-            Nuestro mensaje principal es que la inteligencia artificial puede ayudar,
-            pero el verdadero aprendizaje nace cuando el estudiante piensa, analiza,
-            practica y mejora por sí mismo.
+  <!-- SECCIÓN 4: METRICAS E IMPACTO ESPERADO -->
+  <section id="metrometrics" class="relative py-24 px-6 border-t border-ods-border bg-ods-bg">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase tracking-tight text-ods-dark mb-4">Impacto Tecnológico Proyectado</h2>
+        <p class="font-ui text-lg text-ods-dark/80 max-w-2xl mx-auto mb-12 font-medium">
+          A través del despliegue de nuestro calibrador interactivo en Figma, estimamos una transformación radical en el rendimiento de los entornos piloto escolares:
         </p>
 
-        <a href="/" class="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-xl font-black purple-glow">
-            Volver al inicio
-        </a>
-    </section>
+        <div class="grid md:grid-cols-3 gap-6 font-mono">
+            <div class="bg-white p-8 rounded-2xl border border-ods-border shadow-sm">
+                <span class="text-4xl font-display font-black text-ods-purple tracking-tighter block">+50%</span>
+                <span class="text-xs text-ods-dark/60 uppercase font-bold tracking-wider mt-2 block">Autonomía en Tareas</span>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border-2 border-ods-purple shadow-md">
+                <span class="text-4xl font-display font-black text-ods-purple tracking-tighter block">1:1</span>
+                <span class="text-xs text-ods-dark/60 uppercase font-bold tracking-wider mt-2 block">Simbiosis Humano/IA</span>
+            </div>
+            <div class="bg-white p-8 rounded-2xl border border-ods-border shadow-sm">
+                <span class="text-4xl font-display font-black text-ods-dark tracking-tighter block">0%</span>
+                <span class="text-xs text-ods-dark/60 uppercase font-bold tracking-wider mt-2 block">Copiado Pasivo (Bucle)</span>
+            </div>
+        </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-black py-8 text-center border-t border-purple-500/30">
-        <p class="text-gray-400">
-            Proyecto ODS 4 - Educación de Calidad | Figma interactivo para mejorar el aprendizaje estudiantil
-        </p>
-    </footer>
+  <!-- CIERRE Y FOOTER -->
+  <section class="py-24 px-6 text-center bg-white border-t border-ods-border">
+    <h2 class="font-display font-black text-4xl md:text-6xl text-ods-dark uppercase tracking-tight mb-4">
+      La máquina opera. Tu mente gobierna.
+    </h2>
+    <p class="font-ui text-gray-600 max-w-2xl mx-auto text-lg mb-10 font-medium">
+      No te conviertas en un procesador obsoleto. Regresa al panel principal, calibra tu Cuadrado de Estudio y toma las riendas del software cognitivo.
+    </p>
+    <a href="/" class="bg-ods-purple hover:bg-ods-purple/90 text-white font-display font-black text-lg uppercase tracking-widest px-8 py-4 rounded-xl inline-block transition-all shadow-xl shadow-ods-purple/20">
+        Volver al Panel Central 🎮
+    </a>
+  </section>
+
+  <footer class="border-t border-ods-border py-8 px-6 bg-white text-center text-ods-dark">
+    <p class="font-mono text-xs text-ods-dark/60">
+      Proyecto ODS 4 — Protocolo de Resistencia Artificial | Desarrollado para el Rescate del Aprendizaje Activo en 2026.
+    </p>
+  </footer>
 
 </body>
 </html>

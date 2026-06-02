@@ -46,7 +46,8 @@
     </div>
   </nav>
  
-  <section class="relative h-screen w-full bg-black bg-cover bg-center bg-no-repeat overflow-hidden hero-background">
+  <!-- MODIFICADO: Ahora carga la imagen desde el atributo style con url_for -->
+  <section class="relative h-screen w-full bg-black bg-cover bg-center bg-no-repeat overflow-hidden hero-background" style="background-image: url('{{ url_for('static', filename='image/inicio.jpg') }}') !important;">
     
     <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-transparent flex items-center px-6 md:px-20">
         
@@ -56,8 +57,9 @@
                 <p class="text-[#A020F0] font-mono font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">
                     // PROYECTO CONFIGURACIÓN MENTAL 2026
                 </p>
-                <h1 class="text-white text-4xl md:text-7xl font-display font-black tracking-tight leading-none mb-4 md:mb-6 uppercase drop-shadow-lg">
-                  DEJA DE SER UN<br><span class="text-[#A020F0]">IA-DEPENDIENTE</span>
+                <h1 class="text-white text-4xl md:text-6xl font-display font-black tracking-tight leading-none mb-6 uppercase">
+                  DEJA DE SER UN<br>
+                    <span class="text-[#A020F0] text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">IA-DEPENDIENTE</span>
                 </h1>
                 <p class="text-white/90 font-ui text-sm md:text-lg max-w-xl mb-6 md:mb-10 leading-relaxed font-medium drop-shadow">
                   El estudio tradicional está roto y copiar respuestas automáticas atrofia tu cerebro. Hackea tu mente tomando el control del Cuadrado del Estudio.
@@ -303,7 +305,7 @@
       </div>
  
       <div class="mt-12">
-        <a href="https://www.figma.com" target="_blank" class="bg-ods-purple hover:bg-ods-purple/90 text-white font-display font-black text-xl md:text-2xl uppercase tracking-widest px-8 py-5 rounded-xl inline-block transform hover:scale-105 transition-all shadow-xl shadow-ods-purple/20">
+        <a href="https://www.figma.com/proto/LrEDsk9c4JFH11f1pfoPYw/Educacion-y-Calidad?node-id=0-1&t=Slk2n4zwndGDe2tW-1" target="_blank" class="bg-ods-purple hover:bg-ods-purple/90 text-white font-display font-black text-xl md:text-2xl uppercase tracking-widest px-8 py-5 rounded-xl inline-block transform hover:scale-105 transition-all shadow-xl shadow-ods-purple/20">
           PROBAR INTERFAZ EN FIGMA 🎮
         </a>
         <p class="font-mono text-xs text-ods-dark/60 mt-4 tracking-widest">Proyecto escolar creado por y para estudiantes frente a la crisis de la IA.</p>

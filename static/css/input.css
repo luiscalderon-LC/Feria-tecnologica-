@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* Configuración del objeto de configuración de Tailwind */
 @layer base {
   :root {

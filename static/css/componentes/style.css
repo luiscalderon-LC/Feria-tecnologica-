@@ -1,4 +1,0 @@
-/* Inyección de la imagen de fondo utilizando el sistema de archivos estáticos de Flask */
-.hero-background {
-  background-image: url("/static/image/inicio.jpg") !important;
-}
