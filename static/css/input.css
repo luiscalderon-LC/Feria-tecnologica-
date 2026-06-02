@@ -1,1 +1,23 @@
-@import "tailwindcss";
+/* Configuración del objeto de configuración de Tailwind */
+@layer base {
+  :root {
+    --ods-bg: #E6E6FA;
+    --ods-white: #F0F0F0;
+    --ods-purple: #A020F0;
+    --ods-dark: #1A1A24;
+    --ods-border: #D1D1E9;
+  }
+}
+
+/* Clases de utilidad vinculadas directamente a la configuración de colores */
+.bg-ods-bg { background-color: var(--ods-bg) !important; }
+.bg-ods-white { background-color: var(--ods-white); }
+.bg-ods-purple { background-color: var(--ods-purple); }
+.text-ods-dark { color: var(--ods-dark); }
+.text-ods-purple { color: var(--ods-purple); }
+.border-ods-border { border-color: var(--ods-border); }
+
+/* Inyección exacta de la imagen de fondo del Hero sin alterar clases HTML */
+.hero-background {
+  background-image: url("{{ url_for('static', filename='image/inicio.jpg') }}") !important;
+}

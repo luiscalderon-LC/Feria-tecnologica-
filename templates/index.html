@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La ODS — El Cuadrado del Estudio</title>
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+ 
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes/style.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes/output.css') }}" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+ 
+<body class="bg-ods-bg text-ods-dark font-ui overflow-x-hidden">
+ 
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-ods-border">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="bg-ods-purple/10 px-2 py-0.5 rounded border border-ods-purple/20">
+          <span class="font-mono font-bold text-xs text-ods-purple">SYS.ON</span>
+        </div>
+        <span class="font-display font-black text-xl tracking-widest text-ods-dark uppercase">
+          LA <span class="text-ods-purple">ODS</span>
+        </span>
+      </div>
+ 
+      <div class="hidden md:flex items-center gap-8 font-ui font-bold text-sm tracking-wider uppercase text-ods-dark/70">
+        <a href="#que-es-ods" class="hover:text-ods-purple transition-colors">¿Qué es?</a>
+        <a href="#el-problema" class="hover:text-ods-purple transition-colors">El Problema</a>
+        <a href="#cuadrado" class="hover:text-ods-purple transition-colors">Cuadrado de Estudio</a>
+        <a href="#prototipo" class="hover:text-ods-purple transition-colors">Prototipo</a>
+      </div>
+ 
+      <a href="#prototipo" class="bg-ods-purple hover:bg-ods-purple/90 text-white flex items-center gap-2 px-5 py-2 rounded font-display font-bold text-sm uppercase tracking-widest transition-all">
+        PROBAR APP 🎮
+      </a>
+    </div>
+  </nav>
+ 
+  <section class="relative h-screen w-full bg-black bg-cover bg-center bg-no-repeat overflow-hidden hero-background">
+    
+    <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-transparent flex items-center px-6 md:px-20">
+        
+        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-8 z-10">
+            
+            <div class="flex-1 max-w-xl md:max-w-2xl bg-black/40 md:bg-transparent p-6 rounded-2xl backdrop-blur-sm md:backdrop-blur-none">
+                <p class="text-[#A020F0] font-mono font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-3 md:mb-4">
+                    // PROYECTO CONFIGURACIÓN MENTAL 2026
+                </p>
+                <h1 class="text-white text-4xl md:text-7xl font-display font-black tracking-tight leading-none mb-4 md:mb-6 uppercase drop-shadow-lg">
+                  DEJA DE SER UN<br><span class="text-[#A020F0]">IA-DEPENDIENTE</span>
+                </h1>
+                <p class="text-white/90 font-ui text-sm md:text-lg max-w-xl mb-6 md:mb-10 leading-relaxed font-medium drop-shadow">
+                  El estudio tradicional está roto y copiar respuestas automáticas atrofia tu cerebro. Hackea tu mente tomando el control del Cuadrado del Estudio.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 md:gap-4 font-display font-bold text-xs md:text-sm tracking-wider uppercase">
+                    <a href="#que-es-ods" class="bg-[#A020F0] text-white px-6 py-3 rounded-xl hover:bg-[#A020F0]/80 transition shadow-lg text-center">
+                        Conoce la ODS
+                    </a>
+                    <a href="#el-problema" class="border border-white/60 text-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition text-center">
+                        El Problema
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex-shrink-0 md:mr-6 lg:mr-16">
+                <div class="border-2 border-[#A020F0]/60 p-6 md:p-8 rounded-2xl bg-black/80 backdrop-blur-md shadow-2xl text-center w-48 md:w-56">
+                  <span class="font-display font-black text-4xl md:text-6xl text-white tracking-widest block">ODS</span>
+                  <span class="font-mono text-[9px] text-white/40 tracking-wider block mt-1 uppercase">SYS_OPERATIVO.EXE</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+        <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+    </div>
+</section>
+ 
+  <section id="que-es-ods" class="relative py-24 px-6 border-t border-ods-border bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded bg-ods-purple/10 border border-ods-purple/20">
+            <span class="font-mono text-ods-purple text-xs font-bold uppercase">// El Concepto Base</span>
+          </div>
+          <h2 class="font-display font-black text-5xl md:text-6xl uppercase tracking-tight text-ods-dark mb-6">
+            ¿Qué es la <span class="text-ods-purple">ODS</span>?
+          </h2>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed mb-6">
+            La <strong class="text-ods-dark">ODS (Organización del Estudio)</strong> es tu centro de control mental. Inspirado directamente en la filosofía de los paneles de configuración avanzados de software y streaming (como OBS Studio), la ODS aborda tu cerebro como si fuera un procesador tecnológico.
+          </p>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed">
+            No se trata de técnicas aburridas de memorización antigua. Es un sistema estructurado para <span class="text-ods-purple font-bold">capturar, mezclar y transmitir</span> el conocimiento de forma activa, mapeando tus fuentes de información para que el aprendizaje deje de ser un caos en blanco y negro.
+          </p>
+        </div>
+ 
+        <div class="bg-ods-white border-2 border-ods-dark rounded-2xl p-6 shadow-xl">
+          <div class="flex justify-between items-center border-b border-ods-border pb-3 mb-4">
+            <span class="font-mono text-xs text-ods-dark/60">ODS_Console // Control_Central</span>
+            <span class="w-3 h-3 rounded-full bg-ods-purple animate-pulse"></span>
+          </div>
+          <div class="aspect-video bg-white rounded-xl border border-ods-border flex flex-col items-center justify-center p-4 text-center">
+            <span class="text-5xl mb-2">📐</span>
+            <p class="font-mono text-xs text-ods-purple font-bold uppercase tracking-widest">Panel Integrado ODS</p>
+            <p class="font-ui text-xs text-ods-dark/70 max-w-xs mt-1">Nivelando canales cognitivos en tiempo real...</p>
+          </div>
+          <div class="grid grid-cols-2 gap-3 mt-4 font-mono text-xs text-ods-dark">
+            <div class="p-3 bg-white rounded-lg border border-ods-border">
+              <span class="text-ods-purple block font-bold mb-1">Inputs (Entradas)</span>
+              <p>● Canal_Visual</p>
+              <p>● Canal_Práctico</p>
+            </div>
+            <div class="p-3 bg-white rounded-lg border border-ods-border">
+              <span class="text-ods-dark block font-bold mb-1">Status (Estado)</span>
+              <p>Fricción: <span class="text-purple-600 font-bold">ON</span></p>
+              <p>IA_Bucle: <span class="text-purple-600 font-bold">BLOCKED</span></p>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <section id="el-problema" class="relative py-24 px-6 border-t border-ods-border bg-ods-bg">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="font-mono text-ods-purple text-xs font-bold tracking-[0.3em] uppercase">// Diagnóstico Crítico</span>
+        <div class="flex-1 h-px bg-ods-border"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="font-display font-black text-5xl md:text-7xl uppercase tracking-tight text-ods-dark leading-none mb-6">
+            ¿Por qué el estudio es un<br />
+            <span class="text-ods-purple">Problema Incluido</span><br />
+            dentro de la ODS?
+          </h2>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed mb-6">
+            El estudio tradicional en la secundaria está completamente roto. Y es un problema que cae directamente bajo la jurisdicción de la ODS porque los estudiantes tienen **su sistema de aprendizaje totalmente desconfigurado de fábrica**. 
+          </p>
+          <p class="font-ui text-lg text-ods-dark/80 leading-relaxed">
+            Al no saber cómo organizar sus flujos mentales, ocurren tres fallas críticas que bloquean el cerebro:
+          </p>
+        </div>
+ 
+        <div class="space-y-4">
+          <div class="p-5 rounded-xl bg-white border border-ods-border hover:border-ods-purple transition-all shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl p-2 rounded-lg bg-ods-bg border border-ods-border">📉</span>
+              <div>
+                <h3 class="font-display font-black text-xl text-ods-dark uppercase tracking-wide">1. Falla de Entrada (El canal aburrido)</h3>
+                <p class="text-sm text-ods-dark/70 mt-1 leading-relaxed">
+                  Intentar estudiar leyendo páginas y páginas de texto plano en blanco y negro es insostenible hoy. Es como querer transmitir un juego de última generación con internet de los años 90; **la transmisión se cae**. Tu mente se aburre, se satura y se distrae inmediatamente con TikTok.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="p-5 rounded-xl bg-white border-2 border-ods-purple hover:shadow-md transition-all shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl p-2 rounded-lg bg-ods-purple/10 border border-ods-purple/20">🤖</span>
+              <div>
+                <h3 class="font-display font-black text-xl text-ods-purple uppercase tracking-wide">2. El Parche Tóxico (IA-Dependencia)</h3>
+                <p class="text-sm text-ods-dark/70 mt-1 leading-relaxed">
+                  Como el método tradicional te da dolor de cabeza, buscas el atajo fácil: la Inteligencia Artificial. Copias la tarea, la pegas en ChatGPT, y pasas el resultado a la libreta sin procesar una sola palabra. **Aquí el estudio se vuelve un peligro mortal:** la IA se vuelve tu cerebro de repuesto. Sientes la falsa seguridad de tener buenas notas porque la tarea está entregada, pero tu mente se está atrofiando. El día del examen presencial en papel, sin pantallas, te quedas completamente en blanco.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="p-5 rounded-xl bg-white border border-ods-border hover:border-ods-purple transition-all shadow-sm">
+            <div class="flex items-start gap-4">
+              <span class="text-2xl p-2 rounded-lg bg-ods-bg border border-ods-border">🎛️</span>
+              <div>
+                <h3 class="font-display font-black text-xl text-ods-dark uppercase tracking-wide">3. El Mezclador en Silencio (Cero Fricción)</h3>
+                <p class="text-sm text-ods-dark/70 mt-1 leading-relaxed">
+                  El sistema actual te vuelve un sujeto puramente pasivo: solo escuchas hablar al profesor o dejas que un bot escriba por ti. Has bajado a cero el volumen de la **fricción** (el esfuerzo real de procesar, fallar, equivocarte y corregir), que es el único canal de control que graba los datos en tu memoria a largo plazo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="cuadrado" class="relative py-24 px-6 border-t border-ods-border bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="font-mono text-ods-purple text-xs font-bold tracking-[0.2em] uppercase">// La Estructura Mental</span>
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase tracking-tight text-ods-dark mt-2">
+          La Filosofía del <span class="text-ods-purple">"Cuadrado del Estudio"</span>
+        </h2>
+        <p class="font-ui text-lg text-ods-dark/70 max-w-2xl mx-auto mt-4 font-medium">
+          La base teórica de la ODS. Un ecosistema balanceado de cuatro pilares diseñado para activar tu mente y blindarte contra la vagancia intelectual.
+        </p>
+      </div>
+ 
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-6 bg-ods-white border border-ods-border rounded-xl shadow-sm">
+          <p class="font-mono text-[10px] text-ods-purple font-bold mb-3">[COMPONENTE 01]</p>
+          <span class="text-3xl block mb-3">📥 Inputs</span>
+          <h4 class="font-display font-black text-2xl uppercase tracking-wide text-ods-dark mb-2">Fuentes de Entrada</h4>
+          <p class="text-xs text-ods-dark/80 leading-relaxed">
+            Diagnóstico de tus canales de captura. ¿Eres visual (esquemas y mapas conceptuales de colores), auditivo (debates y audioexplicaciones) o práctico (juegos)?
+          </p>
+        </div>
+ 
+        <div class="p-6 bg-ods-white border border-ods-border rounded-xl shadow-sm">
+          <p class="font-mono text-[10px] text-ods-purple font-bold mb-3">[COMPONENTE 02]</p>
+          <span class="text-3xl block mb-3">🎛️ Mixer</span>
+          <h4 class="font-display font-black text-2xl uppercase tracking-wide text-ods-dark mb-2">Mezclador Cognitivo</h4>
+          <p class="text-xs text-ods-dark/80 leading-relaxed">
+            Equilibra tus canales. Si una materia es densa y teórica, mueves las perillas: subes el volumen del canal visual, activas la interactividad y bajas la lectura plana para no saturar el sistema.
+          </p>
+        </div>
+ 
+        <div class="p-6 bg-ods-white border-2 border-ods-dark rounded-xl shadow-md">
+          <p class="font-mono text-[10px] text-ods-purple font-bold mb-3">[COMPONENTE 03]</p>
+          <span class="text-3xl block mb-3">🛡️ Anti-IA</span>
+          <h4 class="font-display font-black text-2xl uppercase tracking-wide text-ods-purple mb-2">Lienzo de Procesamiento</h4>
+          <p class="text-xs text-ods-dark/80 leading-relaxed">
+            El escudo contra la dependencia. Aquí la Inteligencia Artificial se usa de forma inteligente: no para que haga tus tareas, sino exclusivamente para generar retos y juegos que te obliguen a pensar.
+          </p>
+        </div>
+ 
+        <div class="p-6 bg-ods-white border border-ods-border rounded-xl shadow-sm">
+          <p class="font-mono text-[10px] text-ods-purple font-bold mb-3">[COMPONENTE 04]</p>
+          <span class="text-3xl block mb-3">📡 Output</span>
+          <h4 class="font-display font-black text-2xl uppercase tracking-wide text-ods-dark mb-2">Transmisión de Salida</h4>
+          <p class="text-xs text-ods-dark/80 leading-relaxed">
+            El resultado en vivo. El estudio se convierte en una demostración práctica donde expones, juegas a contrarreloj y demuestras bajo presión que el conocimiento se grabó en tu memoria.
+          </p>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <section id="prototipo" class="relative py-24 px-6 border-t border-ods-border bg-ods-bg">
+    <div class="max-w-5xl mx-auto text-center">
+      <span class="font-mono text-ods-purple text-xs font-bold tracking-[0.3em] uppercase">// Solución Diseñada</span>
+      <h2 class="font-display font-black text-5xl md:text-7xl uppercase tracking-tight text-ods-dark mt-2 mb-6">
+        El Escáner ODS de Configuración Mental
+      </h2>
+      <p class="font-ui text-lg text-ods-dark/80 max-w-2xl mx-auto mb-12 font-medium">
+        Para solucionar esta desconfiguración, estamos desarrollando una aplicación interactiva en <strong class="text-ods-dark">Figma</strong>. Una herramienta que pone a prueba tu cerebro mediante minijuegos rápidos para calcular tu calibración perfecta.
+      </p>
+ 
+      <div class="rounded-2xl border-2 border-ods-dark bg-white text-left overflow-hidden shadow-2xl max-w-3xl mx-auto">
+        <div class="flex items-center justify-between px-5 py-3 border-b border-ods-border bg-ods-white">
+          <div class="flex gap-2">
+            <span class="w-3 h-3 rounded-full bg-ods-purple"></span>
+            <span class="w-3 h-3 rounded-full bg-ods-purple/60"></span>
+            <span class="w-3 h-3 rounded-full bg-ods-border"></span>
+          </div>
+          <span class="font-mono text-xs text-ods-dark/50">figma.com/proto/ods-mental-calibrator</span>
+          <span class="text-xs font-mono font-bold text-ods-purple uppercase tracking-wider">BETA RUNNING</span>
+        </div>
+        
+        <div class="p-8 bg-ods-bg min-h-[280px] flex flex-col justify-center">
+          <div class="max-w-md mx-auto w-full bg-white p-6 rounded-2xl border border-ods-border space-y-4 shadow-xl">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="font-display font-black text-xl uppercase tracking-wide text-ods-dark">Escáner de Canales Activo</h4>
+                <p class="font-mono text-xs text-ods-dark/60">Buscando el balance del Cuadrado del Estudio</p>
+              </div>
+              <span class="text-2xl">🧠</span>
+            </div>
+            
+            <div class="space-y-2 font-mono text-xs text-ods-dark">
+              <div class="p-3 rounded-lg bg-ods-white border border-ods-border flex justify-between items-center">
+                <span>⚡ Test 1: Velocidad y Retención Visual</span>
+                <span class="text-ods-purple font-bold">✓ COMPLETADO</span>
+              </div>
+              <div class="p-3 rounded-lg bg-ods-white border border-ods-border flex justify-between items-center">
+                <span>🔊 Test 2: Frecuencia e Inferencia Auditiva</span>
+                <span class="text-ods-purple font-bold">✓ COMPLETADO</span>
+              </div>
+              <div class="p-3 rounded-lg bg-ods-white border-2 border-ods-purple flex justify-between items-center animate-pulse">
+                <span>🎮 Test 3: Fricción Mecánica / Canal Práctico</span>
+                <span class="text-ods-purple font-bold">CALCULANDO RESISTENCIA...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="mt-12">
+        <a href="https://www.figma.com" target="_blank" class="bg-ods-purple hover:bg-ods-purple/90 text-white font-display font-black text-xl md:text-2xl uppercase tracking-widest px-8 py-5 rounded-xl inline-block transform hover:scale-105 transition-all shadow-xl shadow-ods-purple/20">
+          PROBAR INTERFAZ EN FIGMA 🎮
+        </a>
+        <p class="font-mono text-xs text-ods-dark/60 mt-4 tracking-widest">Proyecto escolar creado por y para estudiantes frente a la crisis de la IA.</p>
+      </div>
+    </div>
+  </section>
+ 
+  <footer class="border-t border-ods-border py-12 px-6 bg-white text-center md:text-left text-ods-dark">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <span class="font-display font-black text-xl text-ods-dark uppercase">SISTEMA <span class="text-ods-purple">ODS</span></span>
+        <p class="font-mono text-xs text-ods-dark/60 mt-1">Solución integral contra la atrofia cerebral y la IA-dependencia.</p>
+      </div>
+      <p class="font-mono text-xs text-ods-dark/50">
+        © 2026 ODS Prototipo Escolar. Hackea tu aprendizaje.
+      </p>
+      <div class="flex items-center justify-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-ods-purple animate-pulse"></span>
+        <span class="font-mono text-xs text-ods-purple uppercase font-bold">CONSOLA OPERATIVA</span>
+      </div>
+    </div>
+  </footer>
+ 
+</body>
+</html>
