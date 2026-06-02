@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infórmate sobre la ODS</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background: #0b0618;
+            color: white;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(168, 85, 247, 0.35);
+            backdrop-filter: blur(14px);
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+                url("https://images.unsplash.com/photo-1523580846011-d3a5bc25702b");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .purple-glow {
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur-md border-b border-purple-500/30">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-black tracking-widest">
+                <span class="text-purple-500">SYS.ON</span> | LA ODS
+            </h1>
+
+            <div class="hidden md:flex gap-6 text-sm font-bold text-gray-300">
+                <a href="#problema" class="hover:text-purple-400">Problema</a>
+                <a href="#solucion" class="hover:text-purple-400">Solución</a>
+                <a href="#figma" class="hover:text-purple-400">Figma</a>
+                <a href="#impacto" class="hover:text-purple-400">Impacto</a>
+            </div>
+
+            <a href="/" class="bg-purple-600 hover:bg-purple-700 px-5 py-2 rounded-lg font-bold">
+                Volver
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <p class="text-purple-400 tracking-[6px] font-bold mb-4">
+                    // PROYECTO ODS 4
+                </p>
+
+                <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+                    Tecnología para mejorar el aprendizaje
+                </h1>
+
+                <p class="text-gray-300 text-lg leading-8 mb-8">
+                    Nuestro proyecto busca ayudar a los estudiantes a dejar la dependencia excesiva de la IA,
+                    mejorar sus trabajos académicos y aprender de forma más activa mediante una experiencia
+                    interactiva diseñada en Figma.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#problema" class="bg-purple-600 hover:bg-purple-700 px-7 py-4 rounded-xl font-black purple-glow">
+                        Conocer el problema
+                    </a>
+
+                    <a href="#solucion" class="border border-purple-500 px-7 py-4 rounded-xl font-black hover:bg-purple-600">
+                        Ver solución
+                    </a>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-6">
+                <img class="rounded-2xl w-full"
+                     src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                     alt="Estudiante usando tecnología">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-6">
+                Problema identificado
+            </h2>
+
+            <p class="text-center text-gray-300 max-w-3xl mx-auto mb-14">
+                Muchos estudiantes usan la inteligencia artificial solo para copiar respuestas,
+                sin analizar ni comprender el tema. Esto afecta su aprendizaje real.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="glass p-8 rounded-3xl">
+                    <img class="rounded-2xl mb-6"
+                         src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                         alt="Estudiantes con laptop">
+                    <h3 class="text-2xl font-black text-purple-400 mb-3">
+                        Dependencia de la IA
+                    </h3>
+                    <p class="text-gray-300">
+                        Los estudiantes pueden acostumbrarse a que la IA haga todo el trabajo,
+                        reduciendo su esfuerzo personal y pensamiento crítico.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <img class="rounded-2xl mb-6"
+                         src="https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+                         alt="Cuaderno de estudio">
+                    <h3 class="text-2xl font-black text-purple-400 mb-3">
+                        Falta de organización
+                    </h3>
+                    <p class="text-gray-300">
+                        Muchos estudiantes no tienen un orden claro para estudiar, investigar,
+                        redactar y mejorar sus tareas.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <img class="rounded-2xl mb-6"
+                         src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                         alt="Trabajo en equipo">
+                    <h3 class="text-2xl font-black text-purple-400 mb-3">
+                        Bajo aprendizaje real
+                    </h3>
+                    <p class="text-gray-300">
+                        Al copiar respuestas automáticas, el estudiante entrega una tarea,
+                        pero no desarrolla sus propias habilidades.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUCION -->
+    <section id="solucion" class="py-24 px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <img class="rounded-3xl purple-glow"
+                     src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                     alt="Persona explicando proyecto">
+            </div>
+
+            <div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Nuestra propuesta
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-8 mb-6">
+                    Creamos una propuesta digital donde el estudiante pueda interactuar con una plataforma
+                    que lo guíe paso a paso para mejorar sus trabajos académicos.
+                </p>
+
+                <p class="text-gray-300 text-lg leading-8 mb-6">
+                    La idea no es prohibir el uso de la IA, sino enseñar a usarla correctamente:
+                    como apoyo, no como reemplazo del aprendizaje.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 mt-8">
+                    <div class="glass p-5 rounded-2xl">
+                        ✅ Mejora trabajos
+                    </div>
+                    <div class="glass p-5 rounded-2xl">
+                        ✅ Organiza ideas
+                    </div>
+                    <div class="glass p-5 rounded-2xl">
+                        ✅ Enseña procesos
+                    </div>
+                    <div class="glass p-5 rounded-2xl">
+                        ✅ Motiva al estudiante
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-14">
+                ¿Cómo funcionaría la aplicación?
+            </h2>
+
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="glass p-7 rounded-3xl text-center">
+                    <div class="text-5xl mb-4">1️⃣</div>
+                    <h3 class="font-black text-xl mb-3">Ingreso</h3>
+                    <p class="text-gray-300">El estudiante entra a la plataforma desde el prototipo.</p>
+                </div>
+
+                <div class="glass p-7 rounded-3xl text-center">
+                    <div class="text-5xl mb-4">2️⃣</div>
+                    <h3 class="font-black text-xl mb-3">Diagnóstico</h3>
+                    <p class="text-gray-300">Responde preguntas sobre su forma de estudiar.</p>
+                </div>
+
+                <div class="glass p-7 rounded-3xl text-center">
+                    <div class="text-5xl mb-4">3️⃣</div>
+                    <h3 class="font-black text-xl mb-3">Guía</h3>
+                    <p class="text-gray-300">Recibe pasos para mejorar su trabajo académico.</p>
+                </div>
+
+                <div class="glass p-7 rounded-3xl text-center">
+                    <div class="text-5xl mb-4">4️⃣</div>
+                    <h3 class="font-black text-xl mb-3">Mejora</h3>
+                    <p class="text-gray-300">Aplica recomendaciones y mejora su aprendizaje.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FIGMA -->
+    <section id="figma" class="py-24 px-6 bg-black/30">
+        <div class="max-w-7xl mx-auto text-center">
+
+            <h2 class="text-4xl md:text-5xl font-black mb-6">
+                Interacción en Figma
+            </h2>
+
+            <p class="text-gray-300 max-w-4xl mx-auto text-lg leading-8 mb-12">
+                En nuestro Figma estamos diseñando una experiencia interactiva donde el estudiante pueda
+                navegar entre pantallas, presionar botones, ver recomendaciones, explorar módulos y entender
+                cómo puede mejorar sus trabajos sin depender completamente de la IA.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl font-black text-purple-400 mb-4">
+                        Pantalla de inicio
+                    </h3>
+                    <p class="text-gray-300">
+                        Presenta el problema principal y motiva al estudiante a tomar control de su aprendizaje.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl font-black text-purple-400 mb-4">
+                        Módulos interactivos
+                    </h3>
+                    <p class="text-gray-300">
+                        Permiten que el estudiante seleccione opciones, revise consejos y explore contenido educativo.
+                    </p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-2xl font-black text-purple-400 mb-4">
+                        Recomendaciones
+                    </h3>
+                    <p class="text-gray-300">
+                        La app muestra consejos para investigar, resumir, organizar y mejorar sus tareas.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RELACION ODS -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Relación con la ODS 4
+                </h2>
+
+                <p class="text-gray-300 text-lg leading-8 mb-6">
+                    Nuestro proyecto se relaciona con la ODS 4: Educación de Calidad, porque busca que los estudiantes
+                    aprendan mejor, desarrollen autonomía y usen la tecnología de manera responsable.
+                </p>
+
+                <p class="text-gray-300 text-lg leading-8">
+                    La educación de calidad no solo significa tener acceso a clases, sino también aprender con herramientas
+                    que ayuden a pensar, crear, analizar y resolver problemas.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-3xl">
+                <h3 class="text-3xl font-black text-purple-400 mb-6">
+                    Aportes a la educación
+                </h3>
+
+                <ul class="space-y-4 text-gray-300 text-lg">
+                    <li>📚 Promueve el aprendizaje autónomo.</li>
+                    <li>🧠 Fortalece el pensamiento crítico.</li>
+                    <li>💻 Usa tecnología de forma responsable.</li>
+                    <li>🎯 Ayuda a mejorar trabajos académicos.</li>
+                    <li>🚀 Motiva a los estudiantes a participar más.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto" class="py-24 px-6 bg-purple-950/40">
+        <div class="max-w-5xl mx-auto text-center">
+
+            <h2 class="text-4xl md:text-5xl font-black mb-8">
+                Impacto esperado
+            </h2>
+
+            <p class="text-gray-300 text-xl leading-9 mb-10">
+                Con esta propuesta esperamos que los estudiantes no solo entreguen trabajos,
+                sino que realmente aprendan durante el proceso. La plataforma busca convertir la tecnología
+                en una herramienta de apoyo educativo, no en una salida fácil para copiar respuestas.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-4xl font-black text-purple-400">+50%</h3>
+                    <p class="text-gray-300 mt-3">Mejor organización</p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-4xl font-black text-purple-400">+70%</h3>
+                    <p class="text-gray-300 mt-3">Mayor participación</p>
+                </div>
+
+                <div class="glass p-8 rounded-3xl">
+                    <h3 class="text-4xl font-black text-purple-400">+IA</h3>
+                    <p class="text-gray-300 mt-3">Uso responsable</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="py-24 px-6 text-center">
+        <h2 class="text-4xl md:text-5xl font-black mb-6">
+            La IA no debe reemplazar tu mente
+        </h2>
+
+        <p class="text-gray-300 max-w-3xl mx-auto text-lg leading-8 mb-10">
+            Nuestro mensaje principal es que la inteligencia artificial puede ayudar,
+            pero el verdadero aprendizaje nace cuando el estudiante piensa, analiza,
+            practica y mejora por sí mismo.
+        </p>
+
+        <a href="/" class="bg-purple-600 hover:bg-purple-700 px-8 py-4 rounded-xl font-black purple-glow">
+            Volver al inicio
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-8 text-center border-t border-purple-500/30">
+        <p class="text-gray-400">
+            Proyecto ODS 4 - Educación de Calidad | Figma interactivo para mejorar el aprendizaje estudiantil
+        </p>
+    </footer>
+
+</body>
+</html>

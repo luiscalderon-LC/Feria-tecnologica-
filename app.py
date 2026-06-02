@@ -15,5 +15,9 @@ def registrar_click():
     print(f"🎮 Evento recibido: Usuario hizo clic en [{boton}]")
     return jsonify({"status": "ok", "mensaje": "Métrica registrada"})
 
+@app.route('/ods4')
+def ods4():
+    return render_template('ods4.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
